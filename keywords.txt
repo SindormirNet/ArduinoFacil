@@ -1,0 +1,43 @@
+#######################################
+# Syntax Coloring Map For Debounce
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ArduinoFacil	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+estableceComoSalida	KEYWORD2
+estableceComoEntrada	KEYWORD2
+enciende	KEYWORD2
+apaga	KEYWORD2
+espera	KEYWORD2
+entrada	KEYWORD2
+
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+comienzoPreparacion	KEYWORD1
+finPreparacion	KEYWORD1
+comienzoReceta	KEYWORD1
+finReceta	KEYWORD1
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+si	LITERAL1
+finSi	LITERAL1
+esta	LITERAL1
+entonces	LITERAL1
+SALIDA	LITERAL1
+ENTRADA	LITERAL1
+ACTIVA	LITERAL1
+INACTIVA	LITERAL1
