@@ -1,11 +1,12 @@
 #include <ArduinoFacil.h>
 
 comienzoPreparacion
-    abrePuerto
+    iniciaPuerto
 finPreparacion
 
 comienzoReceta
     si hay datoDisponible entonces
         enviaDato(dato)
-    finSi	
+    finSi
 finReceta
+
