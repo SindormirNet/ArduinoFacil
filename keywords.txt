@@ -38,11 +38,11 @@ iniciaMotorUno	KEYWORD2
 avanzaMotorUno	KEYWORD2
 mueveMotorUno	KEYWORD2
 paraMotorUno	KEYWORD2
-declaraMotorDos KEYWORD2
-iniciaMotorDos  KEYWORD2
-avanzaMotorDos  KEYWORD2
-mueveMotorDos   KEYWORD2
-paraMotorDos    KEYWORD2
+declaraMotorDos	KEYWORD2
+iniciaMotorDos	KEYWORD2
+avanzaMotorDos	KEYWORD2
+mueveMotorDos	KEYWORD2
+paraMotorDos	KEYWORD2
 
 #######################################
 # Structure (KEYWORD3)
