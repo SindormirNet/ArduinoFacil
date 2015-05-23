@@ -125,6 +125,17 @@ TODO: evaluar incluir:
 | `esMayorOIgual` | `>=` | **Operador comparativo** |
 | `esMenorOIgual` | `<=` | **Operador comparativo** |
 
+## Operadores binarios (LITERAL1) ##
+
+**Módulo**: AF\_CORE.
+
+> Amplía las formas de control
+
+| ArduinoFacil | Arduino equivalente | Tipo |
+| :------- | :------- | :------- |
+| `y` | `) && (` | **Operador binario** |
+| `o` | `) || (` | **Operador binario** |
+
 ## Semántica nula (LITERAL1) ##
 
 **Módulo**: AF\_CORE.
@@ -161,6 +172,7 @@ TODO: evaluar incluir:
 | `si` | `if (` | **Estamento** |
 | `entonces` | `) {` | **Estamento** |
 | `siNo` | `} else {` | **Estamento** |
+| ´siSiNo` | `} else if (` | **Estamento** |
 | `finSi` | `}` | **Estamento** |
 | `repetir(` _indice_ `,` _veces_ `)` | `for (int` _indice_ `= 0;` _indice_ `<` _veces_ `;` _indice_ `++) {` | **Estamento** |
 | `finRepetir` | `}` | **Estamento** |

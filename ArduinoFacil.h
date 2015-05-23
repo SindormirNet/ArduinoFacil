@@ -73,6 +73,11 @@
     #define esMenorOIgual <=
 #endif
 
+/* Operadores binarios */
+#ifdef AF_CORE
+    #define y )&&(
+    #define o )||(
+#endif
 
 /* Macros nulas */
 #ifdef AF_CORE
@@ -163,6 +168,7 @@
     #define entonces ){
     #define finSi }   
     #define siNo }else{
+    #define siSiNo } else if (  
     #define repetir(X,Y) for(int X=0;X<(Y);X++){
     #define finRepetir }
     #define porSiempre do{

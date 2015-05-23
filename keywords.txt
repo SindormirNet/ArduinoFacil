@@ -60,6 +60,7 @@ finReceta	KEYWORD3
 si	KEYWORD3
 entonces	KEYWORD3
 siNo	KEYWORD3
+siSiNo	KEYWORD3
 finSi	KEYWORD3
 repetir	KEYWORD3
 finRepetir	KEYWORD3
@@ -78,6 +79,12 @@ ACTIVA	LITERAL1
 INACTIVA	LITERAL1
 CIERTO	LITERAL1
 FALSO	LITERAL1
+
+#######################################
+# Boolean operators (LITERAL1)
+#######################################
+y	LITERAL1
+o	LITERAL1
 
 #######################################
 # Comparators (LITERAL1)
