@@ -189,14 +189,14 @@ TODO: unificar formato de tablas y añadir ejemplos.
 | `finSi` | `}` | **Estamento** |
 | `repetir(` _indice_ `,` _veces_ `)` | `for (int` _indice_ `= 0;` _indice_ `<` _veces_ `;` _indice_ `++) {` | **Estamento** |
 | `finRepetir` | `}` | **Estamento** |
-| `porSiempre` | `do{` | **Estamento** |
-| `finPorSiempre` | `} while(1);` | **Estamento** |
+| `porSiempre` | `do {` | **Estamento** |
+| `finPorSiempre` | `} while (1);` | **Estamento** |
+| `esperaHastaQue` | `} while ( ` | **Estamento** |
+| `finEsperaHastaQue` | `);` | **Estamento** |
 
 TODO: posibles candidatos:
 
--   esperaHastaQue _evento_  
 -   repetirHastaQue _evento_  
--   incrementa _indice_
 -   ...
 
 ## Funciones de interrupción (KEYWORD2) ##
@@ -234,7 +234,7 @@ TODO: posibles candidatos:
 | ArduinoFacil | Arduino equivalente | Tipo |
 | :------- | :------- | :------- |
 | `entradaAnalogica(` _pin_ `)` | `analogRead(` _pin_ `)` |  |
-| `enciendeConValor(` _pin_ `,` _valor_ `)` | `analogWrite(` _pin_ `,` map(` _valor_ `, 0, 100, 0, 255));` | **Acción** |
+| `enciendeConValor(` _pin_ `,` _valor_ `)` | `analogWrite(` _pin_ `, map(` _valor_ `, 0, 100, 0, 255));` | **Acción** |
 
 ## Funciones de tiempo (KEYWORD2) ##
 
