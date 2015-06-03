@@ -36,15 +36,11 @@
 #define AF_CORE
 #define AF_CORE_EXT
 #define AF_DISTANCE
-#define AF_ACCELSTEPPER
 
 /* Inclusiones de librerías*/
 // -   <DistanceGP2Y0A21YK> https://github.com/jeroendoggen/Arduino-distance-sensor-library
 //     AF_DISTANCE
 //     #include <DistanceGP2Y0A21YK.h>
-// -   <AccelStepper> http://www.airspayce.com/mikem/arduino/AccelStepper
-//     AF_ACCELSTEPPER
-//     #include <AccelStepper.h>
 
 
 /* Remapeos de constantes */
@@ -96,8 +92,8 @@
     #define enciende(X) digitalWrite(X, HIGH);
     #define apaga(X) digitalWrite(X, LOW);
     #define entrada(X) digitalRead(X)
-    #define iniciaInterrupcionSubida(X) attachInterrupt(X+2,isr,RISING);
-    #define iniciaInterrupcionBajada(X) attachInterrupt(X+2,isr,FALLING);
+    #define iniciaInterrupcionSubida(X) attachInterrupt(X+2,isroutine,RISING);
+    #define iniciaInterrupcionBajada(X) attachInterrupt(X+2,isroutine,FALLING);
 #endif
 
 //Funciones analógicas
@@ -133,7 +129,7 @@
     #define dato Serial.read()
 #endif
 
-//Funciones de GP2Y0A21YK
+//Funciones de sensores de distancia
 #ifdef AF_DISTANCE
     #define declaraDistancia DistanceGP2Y0A21YK Dist;
     #define iniciaDistancia(X) Dist.begin(X);
@@ -148,7 +144,7 @@
     #define finPreparacion }
     #define comienzoReceta void loop(){
     #define finReceta }
-    #define comienzoInterrupcion void isr(){
+    #define comienzoInterrupcion void isroutine(){
     #define finInterrupcion }
     #define creaVariable(X) int X=0;
     #define guardaValor(X,Y) Y=X;

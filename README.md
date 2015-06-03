@@ -157,7 +157,7 @@ TODO: unificar formato de tablas y añadir ejemplos.
 | `finPreparacion` | `}` | **Estructura** |
 | `comienzoReceta` | `void loop() {` | **Estructura** |
 | `finReceta` | `}` | **Estructura** |
-| `comienzoInterrupcion` | `void isr() {` | **Estructura** |
+| `comienzoInterrupcion` | `void isroutine() {` | **Estructura** |
 | `finInterrupcion` | `}` | **Estructura** |
 
 ## Variables (KEYWORD3) ##
@@ -207,8 +207,8 @@ TODO: posibles candidatos:
 
 | ArduinoFacil | Arduino equivalente | Tipo |
 | :------- | :------- | :------- |
-| `iniciaInterrupcionBajada(` _pin_ `)` | `attachInterrupt(` _pin_ `- 2, isr, FALLING);` | **Acción** |
-| `iniciaInterrupcionSubida(` _pin_ `)` | `attachInterrupt(` _pin_ `- 2, isr, RISING);` | **Acción** |
+| `iniciaInterrupcionBajada(` _pin_ `)` | `attachInterrupt(` _pin_ `- 2, isroutine, FALLING);` | **Acción** |
+| `iniciaInterrupcionSubida(` _pin_ `)` | `attachInterrupt(` _pin_ `- 2, isroutine, RISING);` | **Acción** |
 
 ## Funciones I/O (KEYWORD2) ##
 
