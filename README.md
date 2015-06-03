@@ -7,18 +7,12 @@ castellano para principiantes.
 
 Esta librería permite manejar otras librerías siguiendo la misma filosofía de
 **ArduinoFacil**.  
-**ArduiniFacil** está creado en módulos, de forma que puede decidir qué otras
+**ArduinoFacil** está creado en módulos, de forma que puede decidir qué otras
 librerías añadir o quitar con sólo un comentario en el archivo de cabecera de la
 presente librería.  
 Por defecto, **ArduinoFacil** sólo trae habilitadas las funciones propias de
 Arduino, con el fin de reducir problemas de compilación (si usted no tiene estas
 librerías externas) y minimizar el código generado.
-
-TODO: evaluar incluir:
-
--   newping
--   servo
--   lcd
 
 # Directrices usadas #
 
@@ -93,6 +87,8 @@ TODO: evaluar incluir:
 
 # Tabla de macros #
 
+TODO: unificar formato de tablas y añadir ejemplos.
+
 ## Constantes (LITERAL1) ##
 
 **Módulo**: AF\_CORE.
@@ -147,6 +143,7 @@ TODO: evaluar incluir:
 | `esta` | `` | **Nulo** |
 | `hay` | `` | **Nulo** |
 | `a` | `` | **Nulo** |
+| `que` | `` | **Nulo** |
 
 ## Estructura (KEYWORD3) ##
 
@@ -160,6 +157,22 @@ TODO: evaluar incluir:
 | `finPreparacion` | `}` | **Estructura** |
 | `comienzoReceta` | `void loop() {` | **Estructura** |
 | `finReceta` | `}` | **Estructura** |
+| `comienzoInterrupcion` | `void isr() {` | **Estructura** |
+| `finInterrupcion` | `}` | **Estructura** |
+
+## Variables (KEYWORD3) ##
+
+**Módulo**: AF\_CORE.
+
+> Declara, inicializa y gestiona variables tipo int.
+
+| ArduinoFacil | Arduino equivalente | Tipo |
+| :------- | :------- | :------- |
+| `creaVariable(` _indice_ `)` | `int ` _indice_ `= 0;` | **Acción** |
+| `guardaValor(` _valor_ `,` _indice_ `)` | _indice_ `= `_valor_ `;` | **Acción** |
+| `incrementaValor(` _valor_ `,` _indice_ `)` | _indice_ `+= `_valor_ `;` | **Acción** |
+| `desplazaValorAIzquierdas(` _valor_ `,` _indice_ `)` | _indice_ `<< `_valor_ `;` | **Acción** |
+| `desplazaValorADerechas(` _valor_ `,` _indice_ `)` | _indice_ `>> `_valor_ `;` | **Acción** |
 
 ## Estructura de control (KEYWORD3) ##
 
@@ -172,7 +185,7 @@ TODO: evaluar incluir:
 | `si` | `if (` | **Estamento** |
 | `entonces` | `) {` | **Estamento** |
 | `siNo` | `} else {` | **Estamento** |
-| ´siSiNo` | `} else if (` | **Estamento** |
+| `siSiNo` | `} else if (` | **Estamento** |
 | `finSi` | `}` | **Estamento** |
 | `repetir(` _indice_ `,` _veces_ `)` | `for (int` _indice_ `= 0;` _indice_ `<` _veces_ `;` _indice_ `++) {` | **Estamento** |
 | `finRepetir` | `}` | **Estamento** |
@@ -181,11 +194,21 @@ TODO: evaluar incluir:
 
 TODO: posibles candidatos:
 
--   guarda _valor_ en _indice_  
 -   esperaHastaQue _evento_  
 -   repetirHastaQue _evento_  
 -   incrementa _indice_
 -   ...
+
+## Funciones de interrupción (KEYWORD2) ##
+
+**Módulo**: AF\_CORE.
+
+> Proporciona la declaración de interrupciones.
+
+| ArduinoFacil | Arduino equivalente | Tipo |
+| :------- | :------- | :------- |
+| `iniciaInterrupcionBajada(` _pin_ `)` | `attachInterrupt(` _pin_ `- 2, isr, FALLING);` | **Acción** |
+| `iniciaInterrupcionSubida(` _pin_ `)` | `attachInterrupt(` _pin_ `- 2, isr, RISING);` | **Acción** |
 
 ## Funciones I/O (KEYWORD2) ##
 
@@ -211,7 +234,7 @@ TODO: posibles candidatos:
 | ArduinoFacil | Arduino equivalente | Tipo |
 | :------- | :------- | :------- |
 | `entradaAnalogica(` _pin_ `)` | `analogRead(` _pin_ `)` |  |
-| `enciendeConValor(` _pin_ `,` _valor_ `)` | `analogWrite(` _pin_ `,` _valor_ `);` | **Acción** |
+| `enciendeConValor(` _pin_ `,` _valor_ `)` | `analogWrite(` _pin_ `,` map(` _valor_ `, 0, 100, 0, 255));` | **Acción** |
 
 ## Funciones de tiempo (KEYWORD2) ##
 
@@ -262,35 +285,16 @@ TODO: posibles candidatos:
 
 ## Funciones de GP2Y0A21YK ##
 
-**Módulo**: AF\_GP2Y0A21YK.
+**Módulo**: AF\_DISTANCE.
 
-> Interpreta datos del sensor Sharp GP2Y0A21YK
+> Interpreta datos de sensores de distancia Sharp GP2Y0A21YK, GP2Y0A41SK, SRF-04
+> y SRF-05.
 
 | ArduinoFacil | Arduino equivalente | Tipo |
 | :------- | :------- | :------- |
 | `declaraDistancia` | `DistanceGP2Y0A21YK Dist;` | **Acción** |
 | `iniciaDistancia(` _pin_ `)` | `Dist.begin(` _pin_ `);` | **Acción** |
 | `distancia` | `Dist.getDistanceCentimeter()` |  |
-
-## Funciones de AccelStepper ##
-
-**Módulo**: AF\_ACCELSTEPPER.
-
-> Mueve motores paso a paso tipo 28BYJ-48 (otros tipos son posibles editando la
-  librería).
-
-| ArduinoFacil | Arduino equivalente | Tipo |
-| :------- | :------- | :------- |
-| `declaraMotorUno(` _pin1_ `,` _pin2_ `,` _pin3_ `,` _pin4_ `);` | `AccelStepper stepperOne(HALF4WIRE,` _pin1_ `,` _pin3_ `,` _pin2_ `,` _pin4_ `);` | **Acción** |
-| `iniciaMotorUno` | `stepperOne.setMaxSpeed(1500); stepperOne.setAcceleration(100);` | **Acción** |
-| `avanzaMotorUno(` _vueltas_ `)` | `if (stepperOne.distanceToGo() == 0) stepperOne.move(` _vueltas_ `* 4096);` | **Acción** |
-| `mueveMotorUno` | `stepperOne.run();` | **Acción** |
-| `paraMotorUno` | `stepperOne.stop();` | **Acción** |
-| `declaraMotorDos(` _pin1_ `,` _pin2_ `,` _pin3_ `,` _pin4_ `);` | `AccelStepper stepperTwo(HALF4WIRE,` _pin1_ `,` _pin3_ `,` _pin2_ `,` _pin4_ `);` | **Acción** |
-| `iniciaMotorDos` | `stepperTwo.setMaxSpeed(1500); stepperTwo.setAcceleration(100);` | **Acción** |
-| `avanzaMotorDos(` _vueltas_ `)` | `if (stepperTwo.distanceToGo() == 0) stepperTwo.move(` _vueltas_ `* 4096);` | **Acción** |
-| `mueveMotorDos` | `stepperTwo.run();` | **Acción** |
-| `paraMotorDos` | `stepperTwo.stop();` | **Acción** |
 
 # Ejemplos #
 

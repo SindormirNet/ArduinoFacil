@@ -35,19 +35,16 @@
 /* Módulos a incluir */
 #define AF_CORE
 #define AF_CORE_EXT
-#define AF_GP2Y0A21YK
+#define AF_DISTANCE
 #define AF_ACCELSTEPPER
 
 /* Inclusiones de librerías*/
-// -  <DistanceGP2Y0A21YK> https://github.com/jeroendoggen/Arduino-GP2Y0A21YK-library
-#ifdef AF_GP2Y0A21YK_
-    #include <../DistanceGP2Y0A21YK/DistanceGP2Y0A21YK_LUTs.h>
-    #include <../DistanceGP2Y0A21YK/DistanceGP2Y0A21YK.h>
-#endif
-// - <AccelStepper> http://www.airspayce.com/mikem/arduino/AccelStepper/ 
-#ifdef AF_ACCELSTEPPER
-    #include <../AccelStepper/AccelStepper.h>
-#endif
+// -   <DistanceGP2Y0A21YK> https://github.com/jeroendoggen/Arduino-distance-sensor-library
+//     AF_DISTANCE
+//     #include <DistanceGP2Y0A21YK.h>
+// -   <AccelStepper> http://www.airspayce.com/mikem/arduino/AccelStepper
+//     AF_ACCELSTEPPER
+//     #include <AccelStepper.h>
 
 
 /* Remapeos de constantes */
@@ -73,17 +70,20 @@
     #define esMenorOIgual <=
 #endif
 
+
 /* Operadores binarios */
 #ifdef AF_CORE
     #define y )&&(
     #define o )||(
 #endif
 
+
 /* Macros nulas */
 #ifdef AF_CORE
     #define esta 
     #define hay 
     #define a 
+    #define que 
 #endif
 
 
@@ -96,12 +96,14 @@
     #define enciende(X) digitalWrite(X, HIGH);
     #define apaga(X) digitalWrite(X, LOW);
     #define entrada(X) digitalRead(X)
+    #define iniciaInterrupcionSubida(X) attachInterrupt(X+2,isr,RISING);
+    #define iniciaInterrupcionBajada(X) attachInterrupt(X+2,isr,FALLING);
 #endif
 
 //Funciones analógicas
 #ifdef AF_CORE
     #define entradaAnalogica(X) analogRead(X)
-    #define enciendeConValor(X,Y) analogWrite(X,Y);
+    #define enciendeConValor(X,Y) analogWrite(X,map(Y,0,100,0,255));
 #endif
 
 //Funciiones de tiempo
@@ -132,24 +134,10 @@
 #endif
 
 //Funciones de GP2Y0A21YK
-#ifdef AF_GP2Y0A21YK
+#ifdef AF_DISTANCE
     #define declaraDistancia DistanceGP2Y0A21YK Dist;
     #define iniciaDistancia(X) Dist.begin(X);
     #define distancia Dist.getDistanceCentimeter()
-#endif
-
-//Funciones de AccelStepper
-#ifdef AF_ACCELSTEPPER
-    #define declaraMotorUno(A,B,C,D) AccelStepper stepperOne(8,A,C,B,D);
-    #define iniciaMotorUno stepperOne.setMaxSpeed(1500);stepperOne.setAcceleration(100);
-    #define avanzaMotorUno(X) if(stepperOne.distanceToGo()==0) stepperOne.move(X*4096);
-    #define mueveMotorUno stepperOne.run();
-    #define paraMotorUno stepperOne.stop();
-    #define declaraMotorDos(A,B,C,D) AccelStepper stepperTwo(8,A,C,B,D);
-    #define iniciaMotorDos stepperTwo.setMaxSpeed(1500);stepperTwo.setAcceleration(100);
-    #define avanzaMotorDos(X) if(stepperTwo.distanceToGo()==0) stepperTwo.move(X*4096);
-    #define mueveMotorDos stepperTwo.run();
-    #define paraMotorDos stepperTwo.stop();
 #endif
 
 
@@ -160,6 +148,13 @@
     #define finPreparacion }
     #define comienzoReceta void loop(){
     #define finReceta }
+    #define comienzoInterrupcion void isr(){
+    #define finInterrupcion }
+    #define creaVariable(X) int X=0;
+    #define guardaValor(X,Y) Y=X;
+    #define incrementaValor(X,Y) Y+=X;
+    #define desplazaValorAIzquierdas(X,Y) Y<<X;
+    #define desplazaValorADerechas(X,Y) Y>>X;
 #endif
 
 //Estructura de control
@@ -173,6 +168,8 @@
     #define finRepetir }
     #define porSiempre do{
     #define finPorSiempre }while(1);
+    #define esperaHastaQue while(
+    #define finEsperaHastaQue );
 #endif
 
 #endif //_ARDUINOFACIL

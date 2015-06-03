@@ -20,6 +20,13 @@ apaga	KEYWORD2
 entrada	KEYWORD2
 entradaAnalogica	KEYWORD2
 enciendeConValor	KEYWORD2
+iniciaInterrupcionBajada	KEYWORD2
+iniciaInterrupcionSubida	KEYWORD2
+creaVariable	KEYWORD2
+guardaValor	KEYWORD2
+incrementaValor	KEYWORD2
+desplazaValorAIzquierdas	KEYWORD2
+desplazaValorADerechas	KEYWORD2
 espera	KEYWORD2
 cronometro	KEYWORD2
 reproduceTono	KEYWORD2
@@ -52,6 +59,8 @@ comienzoPreparacion	KEYWORD3
 finPreparacion	KEYWORD3
 comienzoReceta	KEYWORD3
 finReceta	KEYWORD3
+comienzoInterrupcion	KEYWORD3
+finInterrupcion	KEYWORD3
 
 #######################################
 # Control structures (KEYWORD3)
@@ -103,4 +112,5 @@ esMenorOIgual	LITERAL1
 esta	LITERAL1
 hay	LITERAL1
 a	LITERAL1
+que	LITERAL1
 
