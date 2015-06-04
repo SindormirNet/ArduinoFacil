@@ -22,6 +22,7 @@ entradaAnalogica	KEYWORD2
 enciendeConValor	KEYWORD2
 iniciaInterrupcionBajada	KEYWORD2
 iniciaInterrupcionSubida	KEYWORD2
+declaraInterrupcion	KEYWORD2
 creaVariable	KEYWORD2
 guardaValor	KEYWORD2
 incrementaValor	KEYWORD2
@@ -38,18 +39,10 @@ datoDisponible	KEYWORD2
 enviaDato	KEYWORD2
 enviaTexto	KEYWORD2
 dato	KEYWORD2
+declaraDistancia	KEYWORD2
 iniciaDistancia	KEYWORD2
 distancia	KEYWORD2
-declaraMotorUno	KEYWORD2
-iniciaMotorUno	KEYWORD2
-avanzaMotorUno	KEYWORD2
-mueveMotorUno	KEYWORD2
-paraMotorUno	KEYWORD2
-declaraMotorDos	KEYWORD2
-iniciaMotorDos	KEYWORD2
-avanzaMotorDos	KEYWORD2
-mueveMotorDos	KEYWORD2
-paraMotorDos	KEYWORD2
+
 
 #######################################
 # Structure (KEYWORD3)
@@ -75,6 +68,8 @@ repetir	KEYWORD3
 finRepetir	KEYWORD3
 porSiempre	KEYWORD3
 finPorSiempre	KEYWORD3
+esperaMientrasQue	KEYWORD3
+finEsperaMientrasQue	KEYWORD3
 
 #######################################
 # Constants (LITERAL1)

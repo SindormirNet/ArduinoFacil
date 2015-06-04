@@ -92,8 +92,8 @@
     #define enciende(X) digitalWrite(X, HIGH);
     #define apaga(X) digitalWrite(X, LOW);
     #define entrada(X) digitalRead(X)
-    #define iniciaInterrupcionSubida(X) attachInterrupt(X+2,isroutine,RISING);
-    #define iniciaInterrupcionBajada(X) attachInterrupt(X+2,isroutine,FALLING);
+    #define iniciaInterrupcionSubida(X) attachInterrupt(X-2,isroutine,RISING);
+    #define iniciaInterrupcionBajada(X) attachInterrupt(X-2,isroutine,FALLING);
 #endif
 
 //Funciones analógicas
@@ -144,6 +144,7 @@
     #define finPreparacion }
     #define comienzoReceta void loop(){
     #define finReceta }
+    #define declaraInterrupcion void isroutine();
     #define comienzoInterrupcion void isroutine(){
     #define finInterrupcion }
     #define creaVariable(X) int X=0;
@@ -164,8 +165,8 @@
     #define finRepetir }
     #define porSiempre do{
     #define finPorSiempre }while(1);
-    #define esperaHastaQue while(
-    #define finEsperaHastaQue );
+    #define esperaMientrasQue while(
+    #define finEsperaMientrasQue );
 #endif
 
 #endif //_ARDUINOFACIL

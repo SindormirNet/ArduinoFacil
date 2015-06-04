@@ -191,8 +191,8 @@ TODO: unificar formato de tablas y añadir ejemplos.
 | `finRepetir` | `}` | **Estamento** |
 | `porSiempre` | `do {` | **Estamento** |
 | `finPorSiempre` | `} while (1);` | **Estamento** |
-| `esperaHastaQue` | `} while ( ` | **Estamento** |
-| `finEsperaHastaQue` | `);` | **Estamento** |
+| `esperaMientrasQue` | `} while ( ` | **Estamento** |
+| `finEsperaMientrasQue` | `);` | **Estamento** |
 
 TODO: posibles candidatos:
 
@@ -209,6 +209,7 @@ TODO: posibles candidatos:
 | :------- | :------- | :------- |
 | `iniciaInterrupcionBajada(` _pin_ `)` | `attachInterrupt(` _pin_ `- 2, isroutine, FALLING);` | **Acción** |
 | `iniciaInterrupcionSubida(` _pin_ `)` | `attachInterrupt(` _pin_ `- 2, isroutine, RISING);` | **Acción** |
+| `declaraInterrupcion` | `void isroutine();` | **Acción** |
 
 ## Funciones I/O (KEYWORD2) ##
 
