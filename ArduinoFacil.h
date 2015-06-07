@@ -125,7 +125,7 @@
     #define iniciaPuerto Serial.begin(9600);
     #define datoDisponible Serial.available()>0
     #define enviaDato(X) Serial.write(X);
-    #define enviaTexto(X) Serial.println(#X);
+    #define enviaTexto(X) Serial.println(X);
     #define dato Serial.read()
 #endif
 
