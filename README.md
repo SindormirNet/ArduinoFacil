@@ -168,7 +168,7 @@ TODO: unificar formato de tablas y añadir ejemplos.
 
 | ArduinoFacil | Arduino equivalente | Tipo |
 | :------- | :------- | :------- |
-| `creaVariable(` _indice_ `)` | `int ` _indice_ `= 0;` | **Acción** |
+| `creaVariable(` _indice_ `)` | `long ` _indice_ `= 0;` | **Acción** |
 | `guardaValor(` _valor_ `,` _indice_ `)` | _indice_ `= `_valor_ `;` | **Acción** |
 | `incrementaValor(` _valor_ `,` _indice_ `)` | _indice_ `+= `_valor_ `;` | **Acción** |
 | `desplazaValorAIzquierdas(` _valor_ `,` _indice_ `)` | _indice_ `<< `_valor_ `;` | **Acción** |
@@ -191,8 +191,10 @@ TODO: unificar formato de tablas y añadir ejemplos.
 | `finRepetir` | `}` | **Estamento** |
 | `porSiempre` | `do {` | **Estamento** |
 | `finPorSiempre` | `} while (1);` | **Estamento** |
-| `esperaMientrasQue` | `} while ( ` | **Estamento** |
+| `esperaMientrasQue` | `while ( ` | **Estamento** |
 | `finEsperaMientrasQue` | `);` | **Estamento** |
+| `repetirMientrasQue` | `while ( ` | **Estamento** |
+| `finRepetirMientrasQue` | `}` | **Estamento** |
 
 TODO: posibles candidatos:
 

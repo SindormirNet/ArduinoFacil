@@ -147,7 +147,7 @@
     #define declaraInterrupcion void isroutine();
     #define comienzoInterrupcion void isroutine(){
     #define finInterrupcion }
-    #define creaVariable(X) int X=0;
+    #define creaVariable(X) long X=0;
     #define guardaValor(X,Y) Y=X;
     #define incrementaValor(X,Y) Y+=X;
     #define desplazaValorAIzquierdas(X,Y) Y<<X;
@@ -167,6 +167,8 @@
     #define finPorSiempre }while(1);
     #define esperaMientrasQue while(
     #define finEsperaMientrasQue );
+    #define repetirMientrasQue while(
+    #define finRepetirMientrasQue }
 #endif
 
 #endif //_ARDUINOFACIL

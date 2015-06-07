@@ -70,6 +70,8 @@ porSiempre	KEYWORD3
 finPorSiempre	KEYWORD3
 esperaMientrasQue	KEYWORD3
 finEsperaMientrasQue	KEYWORD3
+repetirMientrasQue	KEYWORD3
+finRepetirMientrasQue	KEYWORD3
 
 #######################################
 # Constants (LITERAL1)
