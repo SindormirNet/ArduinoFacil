@@ -278,7 +278,7 @@ TODO: unificar formato de tablas y añadir ejemplos.
 | `iniciaPuerto` | `Serial.begin(9600);` | **Acción** |
 | `datoDisponible` | `Serial.available() > 0` |  |
 | `enviaDato(` _byte_ `)` | `Serial.write(` _byte_ `);` | **Acción** |
-| `enviaTexto(` _texto_ `)` | `Serial.println("` _texto_ `");` | **Acción** |
+| `enviaTexto(` _texto_ `)` | `Serial.println(` _texto_ `);` | **Acción** |
 | `dato` | `Serial.read()` |  |
 
 ## Funciones de GP2Y0A21YK ##
