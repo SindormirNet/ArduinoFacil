@@ -196,11 +196,6 @@ TODO: unificar formato de tablas y añadir ejemplos.
 | `repetirMientrasQue` | `while ( ` | **Estamento** |
 | `finRepetirMientrasQue` | `}` | **Estamento** |
 
-TODO: posibles candidatos:
-
--   repetirHastaQue _evento_  
--   ...
-
 ## Funciones de interrupción (KEYWORD2) ##
 
 **Módulo**: AF\_CORE.
