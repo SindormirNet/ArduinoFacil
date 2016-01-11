@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map For Debounce
+# Syntax Coloring Map
 #######################################
 
 #######################################
@@ -14,30 +14,100 @@ ArduinoFacil	KEYWORD1
 
 estableceComoSalida	KEYWORD2
 estableceComoEntrada	KEYWORD2
+estableceComoEntradaSubida KEYWORD2
 enciende	KEYWORD2
 apaga	KEYWORD2
-espera	KEYWORD2
 entrada	KEYWORD2
+entradaAnalogica	KEYWORD2
+enciendeConValor	KEYWORD2
+iniciaInterrupcionBajada	KEYWORD2
+iniciaInterrupcionSubida	KEYWORD2
+declaraInterrupcion	KEYWORD2
+creaVariable	KEYWORD2
+guardaValor	KEYWORD2
+incrementaValor	KEYWORD2
+desplazaValorAIzquierdas	KEYWORD2
+desplazaValorADerechas	KEYWORD2
+espera	KEYWORD2
+cronometro	KEYWORD2
+reproduceTono	KEYWORD2
+silenciaTono	KEYWORD2
+generaSemilla	KEYWORD2
+aleatorio	KEYWORD2
+iniciaPuerto	KEYWORD2
+datoDisponible	KEYWORD2
+enviaDato	KEYWORD2
+enviaTexto	KEYWORD2
+dato	KEYWORD2
+declaraDistancia	KEYWORD2
+iniciaDistancia	KEYWORD2
+distancia	KEYWORD2
 
 
 #######################################
-# Instances (KEYWORD2)
+# Structure (KEYWORD3)
 #######################################
-comienzoPreparacion	KEYWORD1
-finPreparacion	KEYWORD1
-comienzoReceta	KEYWORD1
-finReceta	KEYWORD1
 
+comienzoPreparacion	KEYWORD3
+finPreparacion	KEYWORD3
+comienzoReceta	KEYWORD3
+finReceta	KEYWORD3
+comienzoInterrupcion	KEYWORD3
+finInterrupcion	KEYWORD3
+
+#######################################
+# Control structures (KEYWORD3)
+#######################################
+
+si	KEYWORD3
+entonces	KEYWORD3
+siNo	KEYWORD3
+siSiNo	KEYWORD3
+finSi	KEYWORD3
+repetir	KEYWORD3
+finRepetir	KEYWORD3
+porSiempre	KEYWORD3
+finPorSiempre	KEYWORD3
+esperaMientrasQue	KEYWORD3
+finEsperaMientrasQue	KEYWORD3
+repetirMientrasQue	KEYWORD3
+finRepetirMientrasQue	KEYWORD3
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-si	LITERAL1
-finSi	LITERAL1
-esta	LITERAL1
-entonces	LITERAL1
 SALIDA	LITERAL1
 ENTRADA	LITERAL1
+ENTRADA_SUBIDA	LITERAL1
+LED_INCORPORADO	LITERAL1
 ACTIVA	LITERAL1
 INACTIVA	LITERAL1
+CIERTO	LITERAL1
+FALSO	LITERAL1
+
+#######################################
+# Boolean operators (LITERAL1)
+#######################################
+y	LITERAL1
+o	LITERAL1
+
+#######################################
+# Comparators (LITERAL1)
+#######################################
+esIgual	LITERAL1
+noEsIgual	LITERAL1
+esMayor	LITERAL1
+esMenor	LITERAL1
+esMayorOIgual	LITERAL1
+esMenorOIgual	LITERAL1
+
+#######################################
+# Null (LITERAL1)
+#######################################
+
+esta	LITERAL1
+hay	LITERAL1
+a	LITERAL1
+que	LITERAL1
+
