@@ -306,8 +306,3 @@ Esta librería ha sido creada por:
 - Jorge Goméz <jorge@sindormir.net>  
 - kwendenarmo <kwendenarmo@akornsys-rdi.net>
 
-# TODO #
-
-Especificaciones librerías 1.5++  
-https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5:-Library-specification
-
