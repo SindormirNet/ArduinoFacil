@@ -14,7 +14,7 @@ ArduinoFacil	KEYWORD1
 
 estableceComoSalida	KEYWORD2
 estableceComoEntrada	KEYWORD2
-estableceComoEntradaSubida KEYWORD2
+estableceComoEntradaSubida	KEYWORD2
 enciende	KEYWORD2
 apaga	KEYWORD2
 entrada	KEYWORD2
